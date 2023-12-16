@@ -2,17 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from skimage.data import shepp_logan_phantom
 
-def Normal_circ_v2(A, t):
-    # Implementation of Normal_circ_v2 function goes here
-    pass
+from Normal_circ import Normal_circ
+from ameliorate_circ import amerliorate_circ
 
-def ameliorate_circ_v2(B):
-    # Implementation of ameliorate_circ_v2 function goes here
-    pass
-
-def Psi(C, alpha):
-    # Implementation of Psi function goes here
-    pass
+from Psi import Psi
 
 # Equivalent Python code
 def main():

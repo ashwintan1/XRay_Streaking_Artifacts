@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.fftpack import fftn, ifftn
 
-def ameliorate_circ_v2(A):
+def ameliorate_circ(A):
     p = A.shape[0]
     x = np.arange(1, p+1)
     xi1, xi2, xi3 = np.meshgrid(x, x, x, indexing='ij')
@@ -21,4 +21,4 @@ def ameliorate_circ_v2(A):
 # Example usage
 p = 64
 A = np.random.rand(p, p, p)  # Replace this with your actual 3D image data
-ameliorate_circ_v2(A)
+ameliorate_circ(A)

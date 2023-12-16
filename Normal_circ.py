@@ -2,14 +2,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
+from s_integral_circ import s_integral_circ
+from phantominator import shepp_logan
+
 def iscube(A):
     return len(A.shape) == 3 and A.shape[0] == A.shape[1] == A.shape[2]
 
-def s_integral_circ(t, A, X, Y, Z, W):
+#def s_integral_circ(t, A, X, Y, Z, W):
     # Implementation of s_integral_circ function goes here
-    pass
+#    pass
 
-def Normal_circ_v2(A, nt):
+def Normal_circ(A, nt):
     assert iscube(A), 'Image is not a cube.'
 
     p = A.shape[0]
@@ -39,6 +42,6 @@ def Normal_circ_v2(A, nt):
 
 # Example usage
 p = 64
-A = np.random.rand(p, p, p)  # Replace this with your actual 3D image data
+A = shepp_logan(p)
 nt = 30
-Normal_circ_v2(A, nt)
+Normal_circ(A, nt)
